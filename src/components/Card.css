@@ -1,0 +1,33 @@
+.card1 {
+  background-color: #339ee6;
+  margin: 20px;
+  width: 18rem;
+  border: 1px solid black;
+  -webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.card-title {
+  margin-bottom: 15px;
+}
+
+#closeIcon {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 8px;
+  margin-top: 8px;
+}
+
+.card-body {
+  margin-top: 0px !important;
+  padding-top: 0px !important;
+}
+
+.cardImg {
+	background-color: #73dbaa;
+	width: 70px;
+	height: 70px;
+	-webkit-border-radius: 15px;
+	border-radius: 15px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
