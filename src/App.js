@@ -40,7 +40,7 @@ export default function App() {
 
 	return (
 		<div className="App">
-		{`${process.env.REACT_APP_API_KEY }`}
+			<span className="dev">Developed by: Alejandro Flores</span>
 			<Nav onSearch={onSearch} />
 			<Cards cities={cities} onClose={onClose} />
 		</div>

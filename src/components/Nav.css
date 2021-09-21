@@ -1,8 +1,7 @@
 body{
   background-color: brown;
-  background-image: url('./background.jpg');
+  background: url('./background.jpg') no-repeat fixed center;
   background-size: cover;
-
 }
 
 .mainConent{
