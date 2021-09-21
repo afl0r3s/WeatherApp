@@ -5,12 +5,13 @@ import './App.css';
 require('dotenv').config();
 
 
-const apiKey = '4ae2636d8dfbdc3044bede63951a019b';
+//const apiKey = '4ae2636d8dfbdc3044bede63951a019b';
 export default function App() {
 	const [cities, setCities] = useState([]);
+	
 
 	function onSearch(ciudad) {
-		fetch(`http://api.openweathermap.org/data/2.5/weather?q=${ciudad}&appid=${apiKey}&units=metric`)
+		fetch(`http://api.openweathermap.org/data/2.5/weather?q=${ciudad}&appid=${process.env.REACT_APP_API_KEY}&units=metric`)
 			.then((r) => r.json())
 			.then((recurso) => {
 				if (recurso.main !== undefined) {
@@ -32,7 +33,6 @@ export default function App() {
 					alert('Ciudad no encontrada');
 				}
 			});
-		
 	}
 
   function onClose(id) {
@@ -41,7 +41,6 @@ export default function App() {
 
 	return (
 		<div className="App">
-			{/* Tu código acá: */}
 			<Nav onSearch={onSearch} />
 			<Cards cities={cities} onClose={onClose} />
 		</div>
