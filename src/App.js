@@ -5,7 +5,6 @@ import './App.css';
 require('dotenv').config();
 
 
-//const apiKey = '4ae2636d8dfbdc3044bede63951a019b';
 export default function App() {
 	const [cities, setCities] = useState([]);
 	
@@ -41,6 +40,7 @@ export default function App() {
 
 	return (
 		<div className="App">
+		{`${process.env.REACT_APP_API_KEY }`}
 			<Nav onSearch={onSearch} />
 			<Cards cities={cities} onClose={onClose} />
 		</div>
